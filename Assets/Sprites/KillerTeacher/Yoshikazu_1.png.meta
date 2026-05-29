@@ -1,0 +1,1819 @@
+fileFormatVersion: 2
+guid: 19b4fca7fd996c64e93e52f4b05a7185
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6256615206730968475
+    second: Yoshikazu_1_0
+  - first:
+      213: -8611999387386190706
+    second: Yoshikazu_1_1
+  - first:
+      213: -4966402274273173187
+    second: Yoshikazu_1_2
+  - first:
+      213: -1614302319710896996
+    second: Yoshikazu_1_3
+  - first:
+      213: -476749302257593622
+    second: Yoshikazu_1_4
+  - first:
+      213: -1403843934587551476
+    second: Yoshikazu_1_5
+  - first:
+      213: -8167932955548089716
+    second: Yoshikazu_1_6
+  - first:
+      213: 1129837838057901880
+    second: Yoshikazu_1_7
+  - first:
+      213: 950557177545972856
+    second: Yoshikazu_1_8
+  - first:
+      213: 2401519115471285287
+    second: Yoshikazu_1_9
+  - first:
+      213: 2049510676312167485
+    second: Yoshikazu_1_10
+  - first:
+      213: -6447689346235982029
+    second: Yoshikazu_1_11
+  - first:
+      213: 8514363319217819230
+    second: Yoshikazu_1_12
+  - first:
+      213: 5300363112761112375
+    second: Yoshikazu_1_13
+  - first:
+      213: -6977828789960116006
+    second: Yoshikazu_1_14
+  - first:
+      213: 603316831653011744
+    second: Yoshikazu_1_15
+  - first:
+      213: -5458719996146461361
+    second: Yoshikazu_1_16
+  - first:
+      213: 71552741578985577
+    second: Yoshikazu_1_17
+  - first:
+      213: 8499247294229370253
+    second: Yoshikazu_1_18
+  - first:
+      213: 4316721260019153960
+    second: Yoshikazu_1_19
+  - first:
+      213: -525010844038141138
+    second: Yoshikazu_1_20
+  - first:
+      213: 8894428205191166339
+    second: Yoshikazu_1_21
+  - first:
+      213: -5102173993126926929
+    second: Yoshikazu_1_22
+  - first:
+      213: -560365115647578561
+    second: Yoshikazu_1_23
+  - first:
+      213: -6409952717261339698
+    second: Yoshikazu_1_24
+  - first:
+      213: -1867110770848798871
+    second: Yoshikazu_1_25
+  - first:
+      213: 7601411626032034391
+    second: Yoshikazu_1_26
+  - first:
+      213: -5431329796653688799
+    second: Yoshikazu_1_27
+  - first:
+      213: -6258180847237399369
+    second: Yoshikazu_1_28
+  - first:
+      213: -5864965253441795942
+    second: Yoshikazu_1_29
+  - first:
+      213: -6015690027803597468
+    second: Yoshikazu_1_30
+  - first:
+      213: -6116394109385440475
+    second: Yoshikazu_1_31
+  - first:
+      213: 2274370939985238461
+    second: Yoshikazu_1_32
+  - first:
+      213: 8602682389028009702
+    second: Yoshikazu_1_33
+  - first:
+      213: -4143179664122205894
+    second: Yoshikazu_1_34
+  - first:
+      213: 8105271426103435383
+    second: Yoshikazu_1_35
+  - first:
+      213: 4574302693328510243
+    second: Yoshikazu_1_36
+  - first:
+      213: -921771362688198777
+    second: Yoshikazu_1_37
+  - first:
+      213: 5581402206770096208
+    second: Yoshikazu_1_38
+  - first:
+      213: 3772838198450093232
+    second: Yoshikazu_1_39
+  - first:
+      213: -3418376734673263396
+    second: Yoshikazu_1_40
+  - first:
+      213: 4127597334294377917
+    second: Yoshikazu_1_41
+  - first:
+      213: 4942577805634274499
+    second: Yoshikazu_1_42
+  - first:
+      213: -5273272015313615421
+    second: Yoshikazu_1_43
+  - first:
+      213: 2033479067313661897
+    second: Yoshikazu_1_44
+  - first:
+      213: 3400203002802372629
+    second: Yoshikazu_1_45
+  - first:
+      213: -2873166456154494796
+    second: Yoshikazu_1_46
+  - first:
+      213: 3619960300649398496
+    second: Yoshikazu_1_47
+  - first:
+      213: -1310915706376945978
+    second: Yoshikazu_1_48
+  - first:
+      213: -4280868213573111833
+    second: Yoshikazu_1_49
+  - first:
+      213: 3784736420335790369
+    second: Yoshikazu_1_50
+  - first:
+      213: 4410904042446874938
+    second: Yoshikazu_1_51
+  - first:
+      213: 4614975019997730818
+    second: Yoshikazu_1_52
+  - first:
+      213: 664129210593583000
+    second: Yoshikazu_1_53
+  - first:
+      213: -6331968383744310741
+    second: Yoshikazu_1_54
+  - first:
+      213: -4229277978960719360
+    second: Yoshikazu_1_55
+  - first:
+      213: -1085777443078502471
+    second: Yoshikazu_1_56
+  - first:
+      213: 8552079639646209361
+    second: Yoshikazu_1_57
+  - first:
+      213: -2140220476538054406
+    second: Yoshikazu_1_58
+  - first:
+      213: 6301699018800550638
+    second: Yoshikazu_1_59
+  - first:
+      213: -5490836128317482524
+    second: Yoshikazu_1_60
+  - first:
+      213: 3915164613232413228
+    second: Yoshikazu_1_61
+  - first:
+      213: 288702064706093702
+    second: Yoshikazu_1_62
+  - first:
+      213: 225613045755851233
+    second: Yoshikazu_1_63
+  - first:
+      213: -5784061772808581354
+    second: Yoshikazu_1_64
+  - first:
+      213: -1749107912435962985
+    second: Yoshikazu_1_65
+  - first:
+      213: -7509852200753086935
+    second: Yoshikazu_1_66
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Yoshikazu_1_3
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 955
+        width: 34
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9cfa89d798d899e0800000000000000
+      internalID: -1614302319710896996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_4
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 955
+        width: 35
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae25508190f3269f0800000000000000
+      internalID: -476749302257593622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_5
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 955
+        width: 34
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0182de116b848ce0800000000000000
+      internalID: -1403843934587551476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_6
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 955
+        width: 43
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c828953a04ca5ae80800000000000000
+      internalID: -8167932955548089716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_7
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 955
+        width: 43
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f8c3f078dfdaf00800000000000000
+      internalID: 1129837838057901880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_8
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 955
+        width: 43
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87c535a77be013d00800000000000000
+      internalID: 950557177545972856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_9
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 955
+        width: 37
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72ce9f669e8e35120800000000000000
+      internalID: 2401519115471285287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_10
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 955
+        width: 38
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3415f0f913517c10800000000000000
+      internalID: 2049510676312167485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_11
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 955
+        width: 37
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f988f63b43586a0800000000000000
+      internalID: -6447689346235982029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_12
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 955
+        width: 35
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5e089ae358192670800000000000000
+      internalID: 8514363319217819230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_13
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 955
+        width: 35
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 737b5b42b2cae8940800000000000000
+      internalID: 5300363112761112375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_14
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 955
+        width: 35
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad8fee68fa5c92f90800000000000000
+      internalID: -6977828789960116006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_15
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 820
+        width: 34
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02121bd36796f5800800000000000000
+      internalID: 603316831653011744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_16
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 820
+        width: 31
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f455e55c51bbe34b0800000000000000
+      internalID: -5458719996146461361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_17
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 820
+        width: 32
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9605580e6d43ef000800000000000000
+      internalID: 71552741578985577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_18
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 820
+        width: 34
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d85ddb6126463f570800000000000000
+      internalID: 8499247294229370253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_19
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 820
+        width: 34
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c71d17d1318eb30800000000000000
+      internalID: 4316721260019153960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_20
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 820
+        width: 38
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2be0e14b69c6b8f0800000000000000
+      internalID: -525010844038141138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_21
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 820
+        width: 41
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38972a2f35b5f6b70800000000000000
+      internalID: 8894428205191166339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_22
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 820
+        width: 39
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa5ee6529cf6139b0800000000000000
+      internalID: -5102173993126926929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_23
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 820
+        width: 39
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e2e4175ee2938f0800000000000000
+      internalID: -560365115647578561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_24
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 820
+        width: 31
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec3869c07f54b07a0800000000000000
+      internalID: -6409952717261339698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_25
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 820
+        width: 31
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967604375a0b616e0800000000000000
+      internalID: -1867110770848798871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_26
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 820
+        width: 31
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752f9219993ad7960800000000000000
+      internalID: 7601411626032034391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_27
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 685
+        width: 32
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 128567c835a00a4b0800000000000000
+      internalID: -5431329796653688799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_28
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 685
+        width: 31
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bcf24c3da97629a0800000000000000
+      internalID: -6258180847237399369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_29
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 685
+        width: 34
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a98c7980d257b9ea0800000000000000
+      internalID: -5864965253441795942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_30
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 685
+        width: 32
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46528edcac9f38ca0800000000000000
+      internalID: -6015690027803597468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_31
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 685
+        width: 31
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5230acba6f33e1ba0800000000000000
+      internalID: -6116394109385440475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_32
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 685
+        width: 34
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db99a4dd150309f10800000000000000
+      internalID: 2274370939985238461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_33
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 685
+        width: 42
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e6f589cd0ed26770800000000000000
+      internalID: 8602682389028009702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_34
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 685
+        width: 42
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a39af570c087086c0800000000000000
+      internalID: -4143179664122205894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_35
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 685
+        width: 44
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770e4012b65bb7070800000000000000
+      internalID: 8105271426103435383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_36
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 685
+        width: 31
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d55fa50103b7f30800000000000000
+      internalID: 4574302693328510243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_37
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 685
+        width: 31
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78797d254d53533f0800000000000000
+      internalID: -921771362688198777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_38
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 685
+        width: 31
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 058ec1b4cbf157d40800000000000000
+      internalID: 5581402206770096208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_39
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 550
+        width: 34
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc74a52a50db5430800000000000000
+      internalID: 3772838198450093232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_40
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 550
+        width: 35
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd4275d987c7f80d0800000000000000
+      internalID: -3418376734673263396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_41
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 550
+        width: 34
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db5377618eb284930800000000000000
+      internalID: 4127597334294377917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_42
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 550
+        width: 43
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c48f8bc350979440800000000000000
+      internalID: 4942577805634274499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_43
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 550
+        width: 43
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c549338a0391d6b0800000000000000
+      internalID: -5273272015313615421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_44
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 550
+        width: 43
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c76c69107e583c10800000000000000
+      internalID: 2033479067313661897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_45
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 550
+        width: 37
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5108042bd92ff2f20800000000000000
+      internalID: 3400203002802372629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_46
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 550
+        width: 38
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8e750b4567028d0800000000000000
+      internalID: -2873166456154494796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_47
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 550
+        width: 37
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e0493dc6beac3230800000000000000
+      internalID: 3619960300649398496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_48
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 550
+        width: 35
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cefbee4c11becde0800000000000000
+      internalID: -1310915706376945978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_49
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 550
+        width: 35
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7efa6bf6a0d4794c0800000000000000
+      internalID: -4280868213573111833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_50
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 550
+        width: 35
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 129299ec8b5168430800000000000000
+      internalID: 3784736420335790369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_51
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 415
+        width: 38
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a39616c4bdda63d30800000000000000
+      internalID: 4410904042446874938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_52
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 415
+        width: 39
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208144a545fab0040800000000000000
+      internalID: 4614975019997730818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_53
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 415
+        width: 42
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89f14629ff5773900800000000000000
+      internalID: 664129210593583000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_54
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 415
+        width: 38
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b228aed9d445028a0800000000000000
+      internalID: -6331968383744310741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_55
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 280
+        width: 42
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0021aa7f5169e45c0800000000000000
+      internalID: -4229277978960719360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_56
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 280
+        width: 53
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b78c201b2b8ee0f0800000000000000
+      internalID: -1085777443078502471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_57
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 280
+        width: 53
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15586f31f171fa670800000000000000
+      internalID: 8552079639646209361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_58
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 280
+        width: 41
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af89ee2e0d86c42e0800000000000000
+      internalID: -2140220476538054406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_59
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 145
+        width: 37
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee2d809aed1247750800000000000000
+      internalID: 6301699018800550638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_60
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 145
+        width: 47
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e951cb02a1acc3b0800000000000000
+      internalID: -5490836128317482524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_61
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 145
+        width: 47
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ac5e8e875755630800000000000000
+      internalID: 3915164613232413228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_62
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 145
+        width: 37
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6828abc8ffca10400800000000000000
+      internalID: 288702064706093702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_63
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 10
+        width: 37
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1b8f8aed9812300800000000000000
+      internalID: 225613045755851233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_64
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 10
+        width: 36
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61f04d08672eabfa0800000000000000
+      internalID: -5784061772808581354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_65
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 10
+        width: 36
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79bed6dee9be9b7e0800000000000000
+      internalID: -1749107912435962985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoshikazu_1_66
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 10
+        width: 37
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92e3d6a5635a7c790800000000000000
+      internalID: -7509852200753086935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 713bab94f2fd0d04ca497f2cad0bfbc7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Yoshikazu_1_0: 6256615206730968475
+      Yoshikazu_1_1: -8611999387386190706
+      Yoshikazu_1_10: 2049510676312167485
+      Yoshikazu_1_11: -6447689346235982029
+      Yoshikazu_1_12: 8514363319217819230
+      Yoshikazu_1_13: 5300363112761112375
+      Yoshikazu_1_14: -6977828789960116006
+      Yoshikazu_1_15: 603316831653011744
+      Yoshikazu_1_16: -5458719996146461361
+      Yoshikazu_1_17: 71552741578985577
+      Yoshikazu_1_18: 8499247294229370253
+      Yoshikazu_1_19: 4316721260019153960
+      Yoshikazu_1_2: -4966402274273173187
+      Yoshikazu_1_20: -525010844038141138
+      Yoshikazu_1_21: 8894428205191166339
+      Yoshikazu_1_22: -5102173993126926929
+      Yoshikazu_1_23: -560365115647578561
+      Yoshikazu_1_24: -6409952717261339698
+      Yoshikazu_1_25: -1867110770848798871
+      Yoshikazu_1_26: 7601411626032034391
+      Yoshikazu_1_27: -5431329796653688799
+      Yoshikazu_1_28: -6258180847237399369
+      Yoshikazu_1_29: -5864965253441795942
+      Yoshikazu_1_3: -1614302319710896996
+      Yoshikazu_1_30: -6015690027803597468
+      Yoshikazu_1_31: -6116394109385440475
+      Yoshikazu_1_32: 2274370939985238461
+      Yoshikazu_1_33: 8602682389028009702
+      Yoshikazu_1_34: -4143179664122205894
+      Yoshikazu_1_35: 8105271426103435383
+      Yoshikazu_1_36: 4574302693328510243
+      Yoshikazu_1_37: -921771362688198777
+      Yoshikazu_1_38: 5581402206770096208
+      Yoshikazu_1_39: 3772838198450093232
+      Yoshikazu_1_4: -476749302257593622
+      Yoshikazu_1_40: -3418376734673263396
+      Yoshikazu_1_41: 4127597334294377917
+      Yoshikazu_1_42: 4942577805634274499
+      Yoshikazu_1_43: -5273272015313615421
+      Yoshikazu_1_44: 2033479067313661897
+      Yoshikazu_1_45: 3400203002802372629
+      Yoshikazu_1_46: -2873166456154494796
+      Yoshikazu_1_47: 3619960300649398496
+      Yoshikazu_1_48: -1310915706376945978
+      Yoshikazu_1_49: -4280868213573111833
+      Yoshikazu_1_5: -1403843934587551476
+      Yoshikazu_1_50: 3784736420335790369
+      Yoshikazu_1_51: 4410904042446874938
+      Yoshikazu_1_52: 4614975019997730818
+      Yoshikazu_1_53: 664129210593583000
+      Yoshikazu_1_54: -6331968383744310741
+      Yoshikazu_1_55: -4229277978960719360
+      Yoshikazu_1_56: -1085777443078502471
+      Yoshikazu_1_57: 8552079639646209361
+      Yoshikazu_1_58: -2140220476538054406
+      Yoshikazu_1_59: 6301699018800550638
+      Yoshikazu_1_6: -8167932955548089716
+      Yoshikazu_1_60: -5490836128317482524
+      Yoshikazu_1_61: 3915164613232413228
+      Yoshikazu_1_62: 288702064706093702
+      Yoshikazu_1_63: 225613045755851233
+      Yoshikazu_1_64: -5784061772808581354
+      Yoshikazu_1_65: -1749107912435962985
+      Yoshikazu_1_66: -7509852200753086935
+      Yoshikazu_1_7: 1129837838057901880
+      Yoshikazu_1_8: 950557177545972856
+      Yoshikazu_1_9: 2401519115471285287
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
