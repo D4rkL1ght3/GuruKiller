@@ -52,7 +52,6 @@ public class PlayerController : MonoBehaviour
         }
 
         HandleAnimation();
-        HandleSpriteFlip();
         HandleFootsteps();
     }
 
@@ -111,21 +110,6 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("LastMoveY", lastMoveDirection.y);
 
         animator.SetBool("IsMoving", moveInput != Vector2.zero);
-    }
-
-    void HandleSpriteFlip()
-    {
-        if (spriteRenderer == null)
-            return;
-
-        if (moveInput.x > 0f)
-        {
-            spriteRenderer.flipX = false;
-        }
-        else if (moveInput.x < 0f)
-        {
-            spriteRenderer.flipX = true;
-        }
     }
 
     void HandleFootsteps()
