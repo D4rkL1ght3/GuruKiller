@@ -1,0 +1,1079 @@
+fileFormatVersion: 2
+guid: 5d39d3c2ce3c41e44a2544b7c41f8d49
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7346572634709706374
+    second: Seiko_1_0
+  - first:
+      213: -6220205569216920058
+    second: Seiko_1_1
+  - first:
+      213: 8776956799080765224
+    second: Seiko_1_2
+  - first:
+      213: 4460078611261029465
+    second: Seiko_1_3
+  - first:
+      213: -7128997942111043263
+    second: Seiko_1_4
+  - first:
+      213: -2800890015645207269
+    second: Seiko_1_5
+  - first:
+      213: 7465460385664253840
+    second: Seiko_1_6
+  - first:
+      213: 4397857562959458819
+    second: Seiko_1_7
+  - first:
+      213: 8670757815431505713
+    second: Seiko_1_8
+  - first:
+      213: -2091791657542149006
+    second: Seiko_1_9
+  - first:
+      213: -2964557003323195400
+    second: Seiko_1_10
+  - first:
+      213: -1992077398270742304
+    second: Seiko_1_11
+  - first:
+      213: -1221557650479832655
+    second: Seiko_1_12
+  - first:
+      213: 8047037264059330
+    second: Seiko_1_13
+  - first:
+      213: 6759232961846847392
+    second: Seiko_1_14
+  - first:
+      213: 3343820093806834280
+    second: Seiko_1_15
+  - first:
+      213: -6127378336404934020
+    second: Seiko_1_16
+  - first:
+      213: 3886703854008030774
+    second: Seiko_1_17
+  - first:
+      213: 5108335812456005629
+    second: Seiko_1_18
+  - first:
+      213: -1733698058047394773
+    second: Seiko_1_19
+  - first:
+      213: -4386802281269583809
+    second: Seiko_1_20
+  - first:
+      213: 7295445071973699818
+    second: Seiko_1_21
+  - first:
+      213: -8150774444504827244
+    second: Seiko_1_22
+  - first:
+      213: -9153739133713123631
+    second: Seiko_1_23
+  - first:
+      213: -6360753739538323569
+    second: Seiko_1_24
+  - first:
+      213: -3277987055774936768
+    second: Seiko_1_25
+  - first:
+      213: -7807085778307405499
+    second: Seiko_1_26
+  - first:
+      213: 3424618016376474365
+    second: Seiko_1_27
+  - first:
+      213: 2959823818357582389
+    second: Seiko_1_28
+  - first:
+      213: 4592774642911641203
+    second: Seiko_1_29
+  - first:
+      213: -250900557224872180
+    second: Seiko_1_30
+  - first:
+      213: 4396774672703023518
+    second: Seiko_1_31
+  - first:
+      213: 3012644335498259238
+    second: Seiko_1_32
+  - first:
+      213: 7563389831843598883
+    second: Seiko_1_33
+  - first:
+      213: -4479373029651745116
+    second: Seiko_1_34
+  - first:
+      213: -6976618828926223468
+    second: Seiko_1_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Seiko_1_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 955
+        width: 34
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6864a7033e444f560800000000000000
+      internalID: 7346572634709706374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_1
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 955
+        width: 34
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6064be8adf36da9a0800000000000000
+      internalID: -6220205569216920058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_2
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 955
+        width: 34
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 827982ad4b30ec970800000000000000
+      internalID: 8776956799080765224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_3
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 955
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95cf78ecdd165ed30800000000000000
+      internalID: 4460078611261029465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_4
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 955
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1410bf78426b01d90800000000000000
+      internalID: -7128997942111043263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_5
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 955
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b15778ade5d3129d0800000000000000
+      internalID: -2800890015645207269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_6
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 954
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09fb444caa4aa9760800000000000000
+      internalID: 7465460385664253840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_7
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 955
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 302b6f41724580d30800000000000000
+      internalID: 4397857562959458819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_8
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 954
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 137ac322b48b45870800000000000000
+      internalID: 8670757815431505713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_9
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 820
+        width: 34
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c131cf19678f2e0800000000000000
+      internalID: -2091791657542149006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_10
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 820
+        width: 31
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ff3684cc17cbd6d0800000000000000
+      internalID: -2964557003323195400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_11
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 820
+        width: 32
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e0fcf62928ba54e0800000000000000
+      internalID: -1992077398270742304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_12
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 820
+        width: 31
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b12d7af9c72c0fe0800000000000000
+      internalID: -1221557650479832655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_13
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 820
+        width: 31
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb5e9ddcb69c1000800000000000000
+      internalID: 8047037264059330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_14
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 820
+        width: 31
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a72efc119e9dcd50800000000000000
+      internalID: 6759232961846847392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_15
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 816
+        width: 55
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8627b24b8a2a76e20800000000000000
+      internalID: 3343820093806834280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_16
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 817
+        width: 55
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c72f8260edd27faa0800000000000000
+      internalID: -6127378336404934020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_17
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 817
+        width: 56
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6365a45009850f530800000000000000
+      internalID: 3886703854008030774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_18
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 685
+        width: 32
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dffb8d63b5474e640800000000000000
+      internalID: 5108335812456005629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_19
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 685
+        width: 31
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2cec4e3dcaa0f7e0800000000000000
+      internalID: -1733698058047394773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_20
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 685
+        width: 34
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f30ad054192fe13c0800000000000000
+      internalID: -4386802281269583809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_21
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 685
+        width: 31
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae0dd59d3a0ae3560800000000000000
+      internalID: 7295445071973699818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_22
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 685
+        width: 31
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49a35fec3d1a2ee80800000000000000
+      internalID: -8150774444504827244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_23
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 685
+        width: 31
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d6ff68a1c267f080800000000000000
+      internalID: -9153739133713123631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_24
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 682
+        width: 56
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87a413bc201ab7a0800000000000000
+      internalID: -6360753739538323569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_25
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 682
+        width: 55
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 041d43ae3204282d0800000000000000
+      internalID: -3277987055774936768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_26
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 681
+        width: 55
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 549abfc29d8a7a390800000000000000
+      internalID: -7807085778307405499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_27
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 550
+        width: 34
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfac58501ffa68f20800000000000000
+      internalID: 3424618016376474365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_28
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 550
+        width: 34
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53aa1fab418631920800000000000000
+      internalID: 2959823818357582389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_29
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 550
+        width: 34
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37e7b244430dcbf30800000000000000
+      internalID: 4592774642911641203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_30
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 550
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c07f9a4c54f948cf0800000000000000
+      internalID: -250900557224872180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_31
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 550
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e99e5eb054b740d30800000000000000
+      internalID: 4396774672703023518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_32
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 550
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62b67fbbf001fc920800000000000000
+      internalID: 3012644335498259238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_33
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 549
+        width: 34
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 322d6d0cafe86f860800000000000000
+      internalID: 7563389831843598883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_34
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 550
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a6742756f116d1c0800000000000000
+      internalID: -4479373029651745116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seiko_1_35
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 549
+        width: 34
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49bfc8883221e2f90800000000000000
+      internalID: -6976618828926223468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Seiko_1_0: 7346572634709706374
+      Seiko_1_1: -6220205569216920058
+      Seiko_1_10: -2964557003323195400
+      Seiko_1_11: -1992077398270742304
+      Seiko_1_12: -1221557650479832655
+      Seiko_1_13: 8047037264059330
+      Seiko_1_14: 6759232961846847392
+      Seiko_1_15: 3343820093806834280
+      Seiko_1_16: -6127378336404934020
+      Seiko_1_17: 3886703854008030774
+      Seiko_1_18: 5108335812456005629
+      Seiko_1_19: -1733698058047394773
+      Seiko_1_2: 8776956799080765224
+      Seiko_1_20: -4386802281269583809
+      Seiko_1_21: 7295445071973699818
+      Seiko_1_22: -8150774444504827244
+      Seiko_1_23: -9153739133713123631
+      Seiko_1_24: -6360753739538323569
+      Seiko_1_25: -3277987055774936768
+      Seiko_1_26: -7807085778307405499
+      Seiko_1_27: 3424618016376474365
+      Seiko_1_28: 2959823818357582389
+      Seiko_1_29: 4592774642911641203
+      Seiko_1_3: 4460078611261029465
+      Seiko_1_30: -250900557224872180
+      Seiko_1_31: 4396774672703023518
+      Seiko_1_32: 3012644335498259238
+      Seiko_1_33: 7563389831843598883
+      Seiko_1_34: -4479373029651745116
+      Seiko_1_35: -6976618828926223468
+      Seiko_1_4: -7128997942111043263
+      Seiko_1_5: -2800890015645207269
+      Seiko_1_6: 7465460385664253840
+      Seiko_1_7: 4397857562959458819
+      Seiko_1_8: 8670757815431505713
+      Seiko_1_9: -2091791657542149006
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
