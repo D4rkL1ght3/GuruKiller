@@ -137,5 +137,6 @@ public class PlayerController : MonoBehaviour
     void OnDisable()
     {
         rb.linearVelocity = Vector2.zero;
+        animator.SetBool("IsMoving", false);
     }
 }
