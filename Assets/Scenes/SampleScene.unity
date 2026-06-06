@@ -1399,7 +1399,7 @@ GameObject:
   - component: {fileID: 158378980}
   - component: {fileID: 158378979}
   - component: {fileID: 158378978}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BorderWalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3474,6 +3474,37 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!1 &302848583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 302848584}
+  m_Layer: 0
+  m_Name: PatrolPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &302848584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302848583}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.5, y: -24.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1995223022}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &508901544
 GameObject:
   m_ObjectHideFlags: 0
@@ -3873,7 +3904,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 4
   m_MaskInteraction: 0
   m_Sprite: {fileID: -476749302257593622, guid: 19b4fca7fd996c64e93e52f4b05a7185, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3915,23 +3946,22 @@ MonoBehaviour:
   currentState: 0
   player: {fileID: 2070549071}
   playerController: {fileID: 2070549072}
-  patrolPoints: []
-  patrolMoveSpeed: 2
-  patrolPointReachDistance: 0.1
-  patrolWaitTime: 0.75
-  detectionRange: 5
-  losePlayerRange: 7
-  chaseMoveSpeed: 3.5
-  stoppingDistance: 0.05
-  catchDistance: 0.5
-  repathInterval: 0.25
-  escapeGraceTime: 1.5
-  groundTilemap: {fileID: 665354954}
-  obstacleTilemaps:
-  - {fileID: 158378980}
-  requireGroundTile: 0
-  maxSearchIterations: 5000
   quizManager: {fileID: 812537051}
+  patrolPoints:
+  - {fileID: 1565144346}
+  - {fileID: 302848584}
+  patrolSpeed: 1.5
+  patrolPointReachDistance: 0.1
+  patrolWaitTime: 1
+  detectionRange: 8
+  requireLineOfSight: 1
+  sightBlockerLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  chaseSpeed: 2.8
+  catchDistance: 1.4
+  losePlayerRange: 12
+  escapeGraceTime: 30
   startingQuizDifficulty: 1
   maxQuizDifficulty: 8
   animator: {fileID: 525566449}
@@ -7575,7 +7605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeacherQuizManager
   questionGenerator: {fileID: 812537049}
-  quizPanel: {fileID: 937497562}
+  quizPanel: {fileID: 593222362}
   progressText: {fileID: 1065650681}
   questionText: {fileID: 707623760}
   feedbackText: {fileID: 0}
@@ -9321,6 +9351,70 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1565144345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1565144346}
+  m_Layer: 0
+  m_Name: PatrolPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1565144346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565144345}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.5, y: -24.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1995223022}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1995223021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1995223022}
+  m_Layer: 0
+  m_Name: TeacherPatrolPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1995223022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995223021}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1565144346}
+  - {fileID: 302848584}
+  m_Father: {fileID: 2049553540}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2014249546
 GameObject:
   m_ObjectHideFlags: 0
@@ -10426,7 +10520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2049553539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10458,6 +10552,7 @@ Transform:
   - {fileID: 278052629}
   - {fileID: 867722715}
   - {fileID: 2067709971}
+  - {fileID: 1995223022}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2067709970
