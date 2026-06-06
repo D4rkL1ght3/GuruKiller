@@ -3953,14 +3953,14 @@ MonoBehaviour:
   patrolSpeed: 1.5
   patrolPointReachDistance: 0.1
   patrolWaitTime: 1
-  detectionRange: 8
+  detectionRange: 6
   requireLineOfSight: 1
   sightBlockerLayers:
     serializedVersion: 2
     m_Bits: 8
   chaseSpeed: 2.8
   catchDistance: 1.4
-  losePlayerRange: 12
+  losePlayerRange: 8
   escapeGraceTime: 30
   startingQuizDifficulty: 1
   maxQuizDifficulty: 8
