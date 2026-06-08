@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class TeacherAI : MonoBehaviour
@@ -6,6 +7,7 @@ public class TeacherAI : MonoBehaviour
     {
         Patrol,
         Chase,
+        MoveToTarget,
         Quiz
     }
 
@@ -53,6 +55,13 @@ public class TeacherAI : MonoBehaviour
     private Vector2 moveDirection;
     private Vector2 lastMoveDirection = Vector2.down;
 
+    private bool patrolOnce;
+    private Action onPatrolOnceComplete;
+
+    private Transform moveTarget;
+    private float moveTargetSpeed;
+    private Action onMoveTargetReached;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -60,6 +69,11 @@ public class TeacherAI : MonoBehaviour
         if (animator == null)
         {
             animator = GetComponent<Animator>();
+        }
+
+        if (roomController == null)
+        {
+            roomController = GetComponent<TeacherRoomController>();
         }
 
         currentQuizDifficulty = startingQuizDifficulty;
@@ -87,6 +101,9 @@ public class TeacherAI : MonoBehaviour
                 UpdateChaseState();
                 break;
 
+            case TeacherState.MoveToTarget:
+                break;
+
             case TeacherState.Quiz:
                 break;
         }
@@ -103,7 +120,11 @@ public class TeacherAI : MonoBehaviour
                 break;
 
             case TeacherState.Chase:
-                MoveTowardPlayer();
+                MoveTowardChaseTarget();
+                break;
+
+            case TeacherState.MoveToTarget:
+                MoveTowardForcedTarget();
                 break;
 
             case TeacherState.Quiz:
@@ -134,18 +155,23 @@ public class TeacherAI : MonoBehaviour
 
     private void UpdateChaseState()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        if (roomController != null &&
+            !roomController.IsTeacherInSameRoomAsPlayer())
+        {
+            if (roomController.HasEntranceTarget())
+            {
+                return;
+            }
+
+            ChangeState(TeacherState.Patrol);
+            return;
+        }
+
+        float distanceToPlayer =
+            Vector2.Distance(transform.position, player.position);
 
         if (distanceToPlayer <= catchDistance && graceTimer <= 0f)
         {
-            if (roomController != null)
-            {
-                if (!roomController.IsTeacherInSameRoomAsPlayer())
-                {
-                    return;
-                }
-            }
-
             CatchPlayer();
             return;
         }
@@ -162,6 +188,12 @@ public class TeacherAI : MonoBehaviour
         if (patrolPoints == null || patrolPoints.Length == 0)
         {
             StopMoving();
+
+            if (patrolOnce)
+            {
+                CompletePatrolOnce();
+            }
+
             return;
         }
 
@@ -184,6 +216,12 @@ public class TeacherAI : MonoBehaviour
 
             if (currentPatrolIndex >= patrolPoints.Length)
             {
+                if (patrolOnce)
+                {
+                    CompletePatrolOnce();
+                    return;
+                }
+
                 currentPatrolIndex = 0;
             }
 
@@ -191,9 +229,46 @@ public class TeacherAI : MonoBehaviour
         }
     }
 
-    private void MoveTowardPlayer()
+    private void MoveTowardChaseTarget()
     {
-        MoveTowardPosition(player.position, chaseSpeed);
+        Transform chaseTarget = player;
+
+        if (roomController != null)
+        {
+            Transform entranceTarget = roomController.GetEntranceTarget();
+
+            if (entranceTarget != null)
+            {
+                chaseTarget = entranceTarget;
+            }
+        }
+
+        if (chaseTarget == null)
+        {
+            StopMoving();
+            return;
+        }
+
+        MoveTowardPosition(chaseTarget.position, chaseSpeed);
+    }
+
+    private void MoveTowardForcedTarget()
+    {
+        if (moveTarget == null)
+        {
+            CompleteMoveToTarget();
+            return;
+        }
+
+        MoveTowardPosition(moveTarget.position, moveTargetSpeed);
+
+        float distanceToTarget =
+            Vector2.Distance(transform.position, moveTarget.position);
+
+        if (distanceToTarget <= patrolPointReachDistance)
+        {
+            CompleteMoveToTarget();
+        }
     }
 
     private void MoveTowardPosition(Vector3 targetPosition, float speed)
@@ -302,6 +377,11 @@ public class TeacherAI : MonoBehaviour
         graceTimer = escapeGraceTime;
 
         ChangeState(TeacherState.Patrol);
+
+        if (roomController != null)
+        {
+            roomController.ExitRoomAfterQuiz();
+        }
     }
 
     private void OnQuizFailed()
@@ -315,9 +395,12 @@ public class TeacherAI : MonoBehaviour
 
         graceTimer = escapeGraceTime;
 
-        // Later, replace this with your actual Game Over system.
-        // For now, return to patrol so we can keep testing.
         ChangeState(TeacherState.Patrol);
+
+        if (roomController != null)
+        {
+            roomController.ExitRoomAfterQuiz();
+        }
     }
 
     private void ChangeState(TeacherState newState)
@@ -328,7 +411,33 @@ public class TeacherAI : MonoBehaviour
         if (newState == TeacherState.Patrol)
         {
             patrolWaitTimer = 0f;
+            moveTarget = null;
+            onMoveTargetReached = null;
         }
+    }
+
+    private void CompletePatrolOnce()
+    {
+        patrolOnce = false;
+
+        Action callback = onPatrolOnceComplete;
+        onPatrolOnceComplete = null;
+
+        StopMoving();
+
+        callback?.Invoke();
+    }
+
+    private void CompleteMoveToTarget()
+    {
+        Action callback = onMoveTargetReached;
+
+        moveTarget = null;
+        onMoveTargetReached = null;
+
+        StopMoving();
+
+        callback?.Invoke();
     }
 
     private void HandleAnimation()
@@ -349,6 +458,33 @@ public class TeacherAI : MonoBehaviour
     {
         patrolPoints = newPatrolPoints;
         currentPatrolIndex = 0;
+
+        patrolOnce = false;
+        onPatrolOnceComplete = null;
+    }
+
+    public void PatrolOnce(Transform[] newPatrolPoints, Action completedCallback)
+    {
+        patrolPoints = newPatrolPoints;
+        currentPatrolIndex = 0;
+
+        patrolOnce = true;
+        onPatrolOnceComplete = completedCallback;
+
+        ChangeState(TeacherState.Patrol);
+    }
+
+    public void MoveToTarget(
+        Transform target,
+        float speed,
+        Action reachedCallback
+    )
+    {
+        moveTarget = target;
+        moveTargetSpeed = speed;
+        onMoveTargetReached = reachedCallback;
+
+        ChangeState(TeacherState.MoveToTarget);
     }
 
     public void TeleportTo(Vector3 position)
@@ -371,6 +507,11 @@ public class TeacherAI : MonoBehaviour
     public void ForceChase()
     {
         ChangeState(TeacherState.Chase);
+    }
+
+    public bool IsChasing()
+    {
+        return currentState == TeacherState.Chase;
     }
 
     public bool IsInQuiz()

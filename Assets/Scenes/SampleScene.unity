@@ -3970,8 +3970,9 @@ MonoBehaviour:
   visibilityController: {fileID: 525566455}
   roomTransitionManager: {fileID: 1541718613}
   startingTeacherRoom: {fileID: 2049553539}
-  classroomSearchDuration: 6
-  exitDelayAfterQuiz: 1.5
+  roomEntrances:
+  - {fileID: 2067709973}
+  exitDelayAfterQuiz: 1
 --- !u!1 &526057099
 GameObject:
   m_ObjectHideFlags: 0
@@ -9497,7 +9498,7 @@ MonoBehaviour:
   player: {fileID: 2070549071}
   playerController: {fileID: 2070549072}
   fadeImage: {fileID: 508901546}
-  fadeDuration: 0.5
+  fadeDuration: 0.4
 --- !u!4 &1541718614
 Transform:
   m_ObjectHideFlags: 0
@@ -10832,7 +10833,7 @@ GameObject:
   - component: {fileID: 2067709973}
   - component: {fileID: 2067709972}
   m_Layer: 0
-  m_Name: Classroom1Spawn
+  m_Name: Classroom1Entrance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10903,8 +10904,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TeacherRoomEntrance
   hallwayRoom: {fileID: 2049553539}
   targetRoom: {fileID: 2096353473}
+  teacherDoorTargetPoint: {fileID: 2067709971}
   teacherInsideSpawnPoint: {fileID: 526057100}
-  teacherOutsideSpawnPoint: {fileID: 2067709971}
+  teacherInsideExitPoint: {fileID: 526057100}
+  teacherOutsideSpawnPoint: {fileID: 1033569634}
   teacherCanEnter: 1
 --- !u!1 &2070549069
 GameObject:

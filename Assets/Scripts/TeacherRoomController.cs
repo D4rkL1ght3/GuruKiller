@@ -11,16 +11,17 @@ public class TeacherRoomController : MonoBehaviour
     [Header("Starting Room")]
     public Room startingTeacherRoom;
 
-    [Header("Classroom Search")]
-    public float classroomSearchDuration = 6f;
+    [Header("Room Entrances")]
+    public TeacherRoomEntrance[] roomEntrances;
+
+    [Header("Exit Settings")]
     public float exitDelayAfterQuiz = 1.5f;
 
     private Room currentTeacherRoom;
     private Room currentPlayerRoom;
 
     private TeacherRoomEntrance currentEntrance;
-
-    private Coroutine searchRoutine;
+    private TeacherRoomEntrance targetEntrance;
 
     private bool isInsideClassroom;
 
@@ -64,6 +65,23 @@ public class TeacherRoomController : MonoBehaviour
     private void HandlePlayerRoomChanged(Room previousRoom, Room newRoom)
     {
         currentPlayerRoom = newRoom;
+
+        if (!IsTeacherInSameRoomAsPlayer() && !isInsideClassroom)
+        {
+            targetEntrance = FindEntranceForRoom(currentPlayerRoom);
+
+            if (targetEntrance != null &&
+                teacherAI != null &&
+                teacherAI.IsChasing())
+            {
+                teacherAI.ForceChase();
+            }
+        }
+        else
+        {
+            targetEntrance = null;
+        }
+
         UpdateTeacherVisibility();
     }
 
@@ -72,6 +90,19 @@ public class TeacherRoomController : MonoBehaviour
         return currentTeacherRoom != null &&
                currentPlayerRoom != null &&
                currentTeacherRoom == currentPlayerRoom;
+    }
+
+    public bool HasEntranceTarget()
+    {
+        return targetEntrance != null;
+    }
+
+    public Transform GetEntranceTarget()
+    {
+        if (targetEntrance == null)
+            return null;
+
+        return targetEntrance.GetDoorTarget();
     }
 
     public Room GetCurrentPlayerRoom()
@@ -104,8 +135,9 @@ public class TeacherRoomController : MonoBehaviour
     private void EnterRoom(TeacherRoomEntrance entrance)
     {
         currentEntrance = entrance;
-        isInsideClassroom = true;
+        targetEntrance = null;
 
+        isInsideClassroom = true;
         currentTeacherRoom = entrance.targetRoom;
 
         if (entrance.teacherInsideSpawnPoint != null)
@@ -116,35 +148,38 @@ public class TeacherRoomController : MonoBehaviour
         ApplyRoomToTeacher(currentTeacherRoom);
         UpdateTeacherVisibility();
 
-        teacherAI.ReturnToPatrol();
-
-        if (searchRoutine != null)
-        {
-            StopCoroutine(searchRoutine);
-        }
-
-        searchRoutine = StartCoroutine(ClassroomSearchRoutine());
+        teacherAI.PatrolOnce(
+            currentTeacherRoom.teacherPatrolPoints,
+            BeginExitCurrentRoom
+        );
     }
 
-    private IEnumerator ClassroomSearchRoutine()
+    private void BeginExitCurrentRoom()
     {
-        float timer = classroomSearchDuration;
+        if (!isInsideClassroom)
+            return;
 
-        while (timer > 0f)
+        if (currentEntrance == null)
+            return;
+
+        if (teacherAI != null && teacherAI.IsInQuiz())
+            return;
+
+        if (currentEntrance.teacherInsideExitPoint != null)
         {
-            if (teacherAI != null && teacherAI.IsInQuiz())
-            {
-                yield break;
-            }
-
-            timer -= Time.deltaTime;
-            yield return null;
+            teacherAI.MoveToTarget(
+                currentEntrance.teacherInsideExitPoint,
+                teacherAI.patrolSpeed,
+                CompleteExitCurrentRoom
+            );
         }
-
-        ExitCurrentRoom();
+        else
+        {
+            CompleteExitCurrentRoom();
+        }
     }
 
-    public void ExitCurrentRoom()
+    private void CompleteExitCurrentRoom()
     {
         if (!isInsideClassroom)
             return;
@@ -156,7 +191,9 @@ public class TeacherRoomController : MonoBehaviour
 
         if (currentEntrance.teacherOutsideSpawnPoint != null)
         {
-            teacherAI.TeleportTo(currentEntrance.teacherOutsideSpawnPoint.position);
+            teacherAI.TeleportTo(
+                currentEntrance.teacherOutsideSpawnPoint.position
+            );
         }
 
         currentTeacherRoom = returnRoom;
@@ -170,16 +207,38 @@ public class TeacherRoomController : MonoBehaviour
         currentEntrance = null;
     }
 
-    public void ExitRoomAfterDelay()
+    public void ExitRoomAfterQuiz()
     {
-        StartCoroutine(ExitRoomAfterDelayRoutine());
+        if (!isInsideClassroom)
+            return;
+
+        StartCoroutine(ExitRoomAfterQuizRoutine());
     }
 
-    private IEnumerator ExitRoomAfterDelayRoutine()
+    private IEnumerator ExitRoomAfterQuizRoutine()
     {
         yield return new WaitForSeconds(exitDelayAfterQuiz);
 
-        ExitCurrentRoom();
+        BeginExitCurrentRoom();
+    }
+
+    private TeacherRoomEntrance FindEntranceForRoom(Room room)
+    {
+        if (room == null || roomEntrances == null)
+            return null;
+
+        foreach (TeacherRoomEntrance entrance in roomEntrances)
+        {
+            if (entrance == null)
+                continue;
+
+            if (entrance.targetRoom == room)
+            {
+                return entrance;
+            }
+        }
+
+        return null;
     }
 
     private void ApplyRoomToTeacher(Room room)
