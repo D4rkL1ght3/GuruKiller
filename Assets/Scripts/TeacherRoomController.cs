@@ -199,7 +199,11 @@ public class TeacherRoomController : MonoBehaviour
         currentTeacherRoom = returnRoom;
         isInsideClassroom = false;
 
-        ApplyRoomToTeacher(currentTeacherRoom);
+        ApplyRoomToTeacher(
+            currentTeacherRoom,
+            currentEntrance.hallwayReturnPatrolIndex
+        );
+
         UpdateTeacherVisibility();
 
         teacherAI.ReturnToPatrol();
@@ -247,6 +251,17 @@ public class TeacherRoomController : MonoBehaviour
             return;
 
         teacherAI.SetPatrolPoints(room.teacherPatrolPoints);
+    }
+
+    private void ApplyRoomToTeacher(Room room, int startPatrolIndex)
+    {
+        if (teacherAI == null || room == null)
+            return;
+
+        teacherAI.SetPatrolPoints(
+            room.teacherPatrolPoints,
+            startPatrolIndex
+        );
     }
 
     private void UpdateTeacherVisibility()

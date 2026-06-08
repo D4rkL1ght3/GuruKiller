@@ -14,6 +14,10 @@ public class TeacherRoomEntrance : MonoBehaviour
     public Transform teacherInsideExitPoint;
     public Transform teacherOutsideSpawnPoint;
 
+    [Header("Return Patrol")]
+    [Tooltip("After leaving this room, which hallway patrol point should the teacher continue toward?")]
+    public int hallwayReturnPatrolIndex = 0;
+
     [Header("Entry Rules")]
     public bool teacherCanEnter = true;
 

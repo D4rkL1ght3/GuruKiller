@@ -3752,7 +3752,7 @@ Animator:
   m_GameObject: {fileID: 525566448}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cdc868ec22fce124cb37696f3b6b8f61, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3935,7 +3935,7 @@ MonoBehaviour:
   chaseSpeed: 2.8
   catchDistance: 1.4
   losePlayerRange: 10
-  escapeGraceTime: 30
+  escapeGraceTime: 20
   startingQuizDifficulty: 1
   maxQuizDifficulty: 8
   animator: {fileID: 525566449}
@@ -9545,6 +9545,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1995223022}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1608620518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1608620519}
+  m_Layer: 0
+  m_Name: TeacherExit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1608620519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608620518}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2067709971}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1676605549
 GameObject:
   m_ObjectHideFlags: 0
@@ -10851,7 +10882,8 @@ Transform:
   m_LocalPosition: {x: 2.5, y: -8.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1608620519}
   m_Father: {fileID: 1900158381}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &2067709972
@@ -10907,7 +10939,8 @@ MonoBehaviour:
   teacherDoorTargetPoint: {fileID: 2067709971}
   teacherInsideSpawnPoint: {fileID: 526057100}
   teacherInsideExitPoint: {fileID: 526057100}
-  teacherOutsideSpawnPoint: {fileID: 1033569634}
+  teacherOutsideSpawnPoint: {fileID: 1608620519}
+  hallwayReturnPatrolIndex: 2
   teacherCanEnter: 1
 --- !u!1 &2070549069
 GameObject:

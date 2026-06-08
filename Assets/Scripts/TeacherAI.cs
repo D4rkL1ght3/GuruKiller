@@ -463,6 +463,27 @@ public class TeacherAI : MonoBehaviour
         onPatrolOnceComplete = null;
     }
 
+    public void SetPatrolPoints(Transform[] newPatrolPoints, int startIndex)
+    {
+        patrolPoints = newPatrolPoints;
+
+        if (patrolPoints == null || patrolPoints.Length == 0)
+        {
+            currentPatrolIndex = 0;
+        }
+        else
+        {
+            currentPatrolIndex = Mathf.Clamp(
+                startIndex,
+                0,
+                patrolPoints.Length - 1
+            );
+        }
+
+        patrolOnce = false;
+        onPatrolOnceComplete = null;
+    }
+
     public void PatrolOnce(Transform[] newPatrolPoints, Action completedCallback)
     {
         patrolPoints = newPatrolPoints;
