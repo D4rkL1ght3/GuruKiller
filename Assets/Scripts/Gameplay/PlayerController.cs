@@ -5,9 +5,6 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed = 3f;
 
-    [Header("Interaction")]
-    public float maxInteractionDistance = 2f;
-
     [Header("Map Bounds")]
     public Vector2 minBounds;
     public Vector2 maxBounds;
@@ -140,5 +137,6 @@ public class PlayerController : MonoBehaviour
     void OnDisable()
     {
         rb.linearVelocity = Vector2.zero;
+        animator.SetBool("IsMoving", false);
     }
 }
