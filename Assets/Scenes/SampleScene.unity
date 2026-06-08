@@ -119,37 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &29444547
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 29444548}
-  m_Layer: 0
-  m_Name: EntryPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &29444548
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 29444547}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -4.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2096353472}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &86655112
 GameObject:
   m_ObjectHideFlags: 0
@@ -3765,6 +3734,7 @@ GameObject:
   - component: {fileID: 525566449}
   - component: {fileID: 525566454}
   - component: {fileID: 525566455}
+  - component: {fileID: 525566456}
   m_Layer: 0
   m_Name: Teacher
   m_TagString: Untagged
@@ -3948,6 +3918,7 @@ MonoBehaviour:
   player: {fileID: 2070549071}
   playerController: {fileID: 2070549072}
   quizManager: {fileID: 812537051}
+  roomController: {fileID: 525566456}
   patrolPoints:
   - {fileID: 1565144346}
   - {fileID: 302848584}
@@ -3961,8 +3932,6 @@ MonoBehaviour:
   sightBlockerLayers:
     serializedVersion: 2
     m_Bits: 8
-  visibilityController: {fileID: 525566455}
-  canCatchOnlyWhenVisible: 1
   chaseSpeed: 2.8
   catchDistance: 1.4
   losePlayerRange: 10
@@ -3982,14 +3951,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4b74bf42c26c64c9f1b22e02a34251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeacherVisibilityController
-  roomTransitionManager: {fileID: 1541718613}
   spriteRenderers:
   - {fileID: 525566452}
   animator: {fileID: 525566449}
-  hallwayRoom: {fileID: 2049553539}
-  currentTeacherRoom: {fileID: 2049553539}
-  teacherCollider: {fileID: 525566450}
-  disableColliderWhenHidden: 0
+--- !u!114 &525566456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525566448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d9917f5c90291b44aa585455e9ffcb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeacherRoomController
+  teacherAI: {fileID: 525566454}
+  visibilityController: {fileID: 525566455}
+  roomTransitionManager: {fileID: 1541718613}
+  startingTeacherRoom: {fileID: 2049553539}
+  classroomSearchDuration: 6
+  exitDelayAfterQuiz: 1.5
+--- !u!1 &526057099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 526057100}
+  m_Layer: 0
+  m_Name: RoomEntryPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &526057100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526057099}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.5, y: -4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2096353472}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &593222362
 GameObject:
   m_ObjectHideFlags: 0
@@ -7880,7 +7893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomDoor
   targetRoom: {fileID: 2096353473}
-  targetSpawnPoint: {fileID: 29444548}
+  targetSpawnPoint: {fileID: 526057100}
   spriteRenderer: {fileID: 867722716}
   highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!61 &867722718
@@ -9595,6 +9608,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1676605550}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1900158380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1900158381}
+  m_Layer: 0
+  m_Name: HallwayEntryPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1900158381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900158380}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2067709971}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1995223021
 GameObject:
   m_ObjectHideFlags: 0
@@ -10756,7 +10801,6 @@ MonoBehaviour:
   - {fileID: 302848584}
   - {fileID: 1404242573}
   - {fileID: 1033569634}
-  teacherEntryPoint: {fileID: 1326815543}
 --- !u!4 &2049553540
 Transform:
   m_ObjectHideFlags: 0
@@ -10772,7 +10816,6 @@ Transform:
   m_Children:
   - {fileID: 278052629}
   - {fileID: 867722715}
-  - {fileID: 2067709971}
   - {fileID: 1995223022}
   - {fileID: 1326815543}
   m_Father: {fileID: 0}
@@ -10786,6 +10829,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2067709971}
+  - component: {fileID: 2067709973}
+  - component: {fileID: 2067709972}
   m_Layer: 0
   m_Name: Classroom1Spawn
   m_TagString: Untagged
@@ -10801,13 +10846,66 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067709970}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.5, y: -8.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2049553540}
+  m_Father: {fileID: 1900158381}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2067709972
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067709970}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1.5
+--- !u!114 &2067709973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067709970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a7ca396f4dfc5a49a1925c96955ec7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeacherRoomEntrance
+  hallwayRoom: {fileID: 2049553539}
+  targetRoom: {fileID: 2096353473}
+  teacherInsideSpawnPoint: {fileID: 526057100}
+  teacherOutsideSpawnPoint: {fileID: 2067709971}
+  teacherCanEnter: 1
 --- !u!1 &2070549069
 GameObject:
   m_ObjectHideFlags: 0
@@ -11041,8 +11139,8 @@ Transform:
   - {fileID: 1316699526}
   - {fileID: 2146119897}
   - {fileID: 1300625647}
-  - {fileID: 29444548}
   - {fileID: 1676605550}
+  - {fileID: 526057100}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2096353473
@@ -11063,7 +11161,6 @@ MonoBehaviour:
   teacherPatrolPoints:
   - {fileID: 1869288630}
   - {fileID: 1078050891}
-  teacherEntryPoint: {fileID: 29444548}
 --- !u!1 &2105405493
 GameObject:
   m_ObjectHideFlags: 0
@@ -11389,6 +11486,7 @@ SceneRoots:
   - {fileID: 1137444581}
   - {fileID: 2070549071}
   - {fileID: 525566453}
+  - {fileID: 1541718614}
   - {fileID: 2096353472}
   - {fileID: 2049553540}
-  - {fileID: 1541718614}
+  - {fileID: 1900158381}

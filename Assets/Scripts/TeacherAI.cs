@@ -16,6 +16,7 @@ public class TeacherAI : MonoBehaviour
     public Transform player;
     public PlayerController playerController;
     public TeacherQuizManager quizManager;
+    public TeacherRoomController roomController;
 
     [Header("Patrol")]
     public Transform[] patrolPoints;
@@ -27,10 +28,6 @@ public class TeacherAI : MonoBehaviour
     public float detectionRange = 4.5f;
     public bool requireLineOfSight = true;
     public LayerMask sightBlockerLayers;
-
-    [Header("Room Rules")]
-    public TeacherVisibilityController visibilityController;
-    public bool canCatchOnlyWhenVisible = true;
 
     [Header("Chase")]
     public float chaseSpeed = 2.8f;
@@ -141,9 +138,9 @@ public class TeacherAI : MonoBehaviour
 
         if (distanceToPlayer <= catchDistance && graceTimer <= 0f)
         {
-            if (canCatchOnlyWhenVisible && visibilityController != null)
+            if (roomController != null)
             {
-                if (!visibilityController.IsTeacherVisible())
+                if (!roomController.IsTeacherInSameRoomAsPlayer())
                 {
                     return;
                 }
@@ -240,6 +237,14 @@ public class TeacherAI : MonoBehaviour
         if (graceTimer > 0f)
             return false;
 
+        if (roomController != null)
+        {
+            if (!roomController.IsTeacherInSameRoomAsPlayer())
+            {
+                return false;
+            }
+        }
+
         float distanceToPlayer =
             Vector2.Distance(transform.position, player.position);
 
@@ -326,6 +331,20 @@ public class TeacherAI : MonoBehaviour
         }
     }
 
+    private void HandleAnimation()
+    {
+        if (animator == null)
+            return;
+
+        animator.SetFloat("MoveX", moveDirection.x);
+        animator.SetFloat("MoveY", moveDirection.y);
+
+        animator.SetFloat("LastMoveX", lastMoveDirection.x);
+        animator.SetFloat("LastMoveY", lastMoveDirection.y);
+
+        animator.SetBool("IsMoving", moveDirection != Vector2.zero);
+    }
+
     public void SetPatrolPoints(Transform[] newPatrolPoints)
     {
         patrolPoints = newPatrolPoints;
@@ -349,18 +368,14 @@ public class TeacherAI : MonoBehaviour
         ChangeState(TeacherState.Patrol);
     }
 
-    private void HandleAnimation()
+    public void ForceChase()
     {
-        if (animator == null)
-            return;
+        ChangeState(TeacherState.Chase);
+    }
 
-        animator.SetFloat("MoveX", moveDirection.x);
-        animator.SetFloat("MoveY", moveDirection.y);
-
-        animator.SetFloat("LastMoveX", lastMoveDirection.x);
-        animator.SetFloat("LastMoveY", lastMoveDirection.y);
-
-        animator.SetBool("IsMoving", moveDirection != Vector2.zero);
+    public bool IsInQuiz()
+    {
+        return currentState == TeacherState.Quiz;
     }
 
     private void OnDrawGizmosSelected()

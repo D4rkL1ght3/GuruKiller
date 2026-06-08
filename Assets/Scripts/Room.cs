@@ -18,7 +18,6 @@ public class Room : MonoBehaviour
 
     [Header("Teacher")]
     public Transform[] teacherPatrolPoints;
-    public Transform teacherEntryPoint;
 
     public void ShowRoom()
     {
