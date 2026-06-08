@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 29444548}
   m_Layer: 0
-  m_Name: Spawnpoint
+  m_Name: EntryPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3499,7 +3499,7 @@ Transform:
   m_GameObject: {fileID: 302848583}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.5, y: -24.5, z: 0}
+  m_LocalPosition: {x: 12.5, y: -9.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3764,6 +3764,7 @@ GameObject:
   - component: {fileID: 525566450}
   - component: {fileID: 525566449}
   - component: {fileID: 525566454}
+  - component: {fileID: 525566455}
   m_Layer: 0
   m_Name: Teacher
   m_TagString: Untagged
@@ -3929,7 +3930,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2049553540}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &525566454
 MonoBehaviour:
@@ -3950,21 +3951,45 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 1565144346}
   - {fileID: 302848584}
+  - {fileID: 1404242573}
+  - {fileID: 1033569634}
   patrolSpeed: 1.5
   patrolPointReachDistance: 0.1
   patrolWaitTime: 1
-  detectionRange: 6
+  detectionRange: 8
   requireLineOfSight: 1
   sightBlockerLayers:
     serializedVersion: 2
     m_Bits: 8
+  visibilityController: {fileID: 525566455}
+  canCatchOnlyWhenVisible: 1
   chaseSpeed: 2.8
   catchDistance: 1.4
-  losePlayerRange: 8
+  losePlayerRange: 10
   escapeGraceTime: 30
   startingQuizDifficulty: 1
   maxQuizDifficulty: 8
   animator: {fileID: 525566449}
+--- !u!114 &525566455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525566448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4b74bf42c26c64c9f1b22e02a34251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeacherVisibilityController
+  roomTransitionManager: {fileID: 1541718613}
+  spriteRenderers:
+  - {fileID: 525566452}
+  animator: {fileID: 525566449}
+  hallwayRoom: {fileID: 2049553539}
+  currentTeacherRoom: {fileID: 2049553539}
+  teacherCollider: {fileID: 525566450}
+  disableColliderWhenHidden: 0
 --- !u!1 &593222362
 GameObject:
   m_ObjectHideFlags: 0
@@ -4053,7 +4078,7 @@ GameObject:
   - component: {fileID: 599181809}
   - component: {fileID: 599181808}
   - component: {fileID: 599181810}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BorderWalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7982,6 +8007,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937497562}
   m_CullTransparentMesh: 1
+--- !u!1 &1033569633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1033569634}
+  m_Layer: 0
+  m_Name: PatrolPoint (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1033569634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033569633}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.5, y: -24.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1995223022}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1065650679
 GameObject:
   m_ObjectHideFlags: 0
@@ -8119,6 +8175,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1065650679}
   m_CullTransparentMesh: 1
+--- !u!1 &1078050890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1078050891}
+  m_Layer: 0
+  m_Name: PatrolPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1078050891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078050890}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.5, y: -3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1676605550}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1137444578
 GameObject:
   m_ObjectHideFlags: 0
@@ -8382,6 +8469,37 @@ Transform:
   - {fileID: 1332921477}
   - {fileID: 599181807}
   m_Father: {fileID: 2096353472}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1326815542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1326815543}
+  m_Layer: 0
+  m_Name: TeacherSpawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1326815543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326815542}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -24.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2049553540}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1332921476
 GameObject:
@@ -8987,6 +9105,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1404242572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1404242573}
+  m_Layer: 0
+  m_Name: PatrolPoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1404242573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404242572}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.5, y: -9.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1995223022}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1521830667
 GameObject:
   m_ObjectHideFlags: 0
@@ -9382,6 +9531,70 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1995223022}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1676605549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1676605550}
+  m_Layer: 0
+  m_Name: TeacherPatrolPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1676605550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676605549}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1869288630}
+  - {fileID: 1078050891}
+  m_Father: {fileID: 2096353472}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1869288629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1869288630}
+  m_Layer: 0
+  m_Name: PatrolPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1869288630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869288629}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3, y: -3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1676605550}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1995223021
 GameObject:
   m_ObjectHideFlags: 0
@@ -9413,6 +9626,8 @@ Transform:
   m_Children:
   - {fileID: 1565144346}
   - {fileID: 302848584}
+  - {fileID: 1404242573}
+  - {fileID: 1033569634}
   m_Father: {fileID: 2049553540}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2014249546
@@ -10533,8 +10748,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02f39b6872417342bd2a6db840ec5cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
+  roomType: 0
   minBounds: {x: -13.7, y: -26}
   maxBounds: {x: 13.7, y: -7.6}
+  teacherPatrolPoints:
+  - {fileID: 1565144346}
+  - {fileID: 302848584}
+  - {fileID: 1404242573}
+  - {fileID: 1033569634}
+  teacherEntryPoint: {fileID: 1326815543}
 --- !u!4 &2049553540
 Transform:
   m_ObjectHideFlags: 0
@@ -10548,11 +10770,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 525566453}
   - {fileID: 278052629}
   - {fileID: 867722715}
   - {fileID: 2067709971}
   - {fileID: 1995223022}
+  - {fileID: 1326815543}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2067709970
@@ -10820,6 +11042,7 @@ Transform:
   - {fileID: 2146119897}
   - {fileID: 1300625647}
   - {fileID: 29444548}
+  - {fileID: 1676605550}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2096353473
@@ -10834,8 +11057,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02f39b6872417342bd2a6db840ec5cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
+  roomType: 1
   minBounds: {x: -4.8, y: -16.2}
   maxBounds: {x: 4.8, y: 5.2}
+  teacherPatrolPoints:
+  - {fileID: 1869288630}
+  - {fileID: 1078050891}
+  teacherEntryPoint: {fileID: 29444548}
 --- !u!1 &2105405493
 GameObject:
   m_ObjectHideFlags: 0
@@ -11006,7 +11234,7 @@ GameObject:
   - component: {fileID: 2146119898}
   - component: {fileID: 2146119899}
   - component: {fileID: 2146119900}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11160,6 +11388,7 @@ SceneRoots:
   - {fileID: 191812342}
   - {fileID: 1137444581}
   - {fileID: 2070549071}
+  - {fileID: 525566453}
   - {fileID: 2096353472}
   - {fileID: 2049553540}
   - {fileID: 1541718614}

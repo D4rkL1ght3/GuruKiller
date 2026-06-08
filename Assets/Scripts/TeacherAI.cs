@@ -28,6 +28,10 @@ public class TeacherAI : MonoBehaviour
     public bool requireLineOfSight = true;
     public LayerMask sightBlockerLayers;
 
+    [Header("Room Rules")]
+    public TeacherVisibilityController visibilityController;
+    public bool canCatchOnlyWhenVisible = true;
+
     [Header("Chase")]
     public float chaseSpeed = 2.8f;
     public float catchDistance = 0.45f;
@@ -137,6 +141,14 @@ public class TeacherAI : MonoBehaviour
 
         if (distanceToPlayer <= catchDistance && graceTimer <= 0f)
         {
+            if (canCatchOnlyWhenVisible && visibilityController != null)
+            {
+                if (!visibilityController.IsTeacherVisible())
+                {
+                    return;
+                }
+            }
+
             CatchPlayer();
             return;
         }
@@ -312,6 +324,29 @@ public class TeacherAI : MonoBehaviour
         {
             patrolWaitTimer = 0f;
         }
+    }
+
+    public void SetPatrolPoints(Transform[] newPatrolPoints)
+    {
+        patrolPoints = newPatrolPoints;
+        currentPatrolIndex = 0;
+    }
+
+    public void TeleportTo(Vector3 position)
+    {
+        if (rb == null)
+        {
+            rb = GetComponent<Rigidbody2D>();
+        }
+
+        rb.linearVelocity = Vector2.zero;
+        rb.position = position;
+        transform.position = position;
+    }
+
+    public void ReturnToPatrol()
+    {
+        ChangeState(TeacherState.Patrol);
     }
 
     private void HandleAnimation()

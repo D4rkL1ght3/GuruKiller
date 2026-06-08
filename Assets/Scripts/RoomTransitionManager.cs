@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +16,10 @@ public class RoomTransitionManager : MonoBehaviour
     public Image fadeImage;
     public float fadeDuration = 0.35f;
 
-    private Room currentRoom;
+    public Room CurrentRoom { get; private set; }
+
+    public event Action<Room, Room> OnRoomChanged;
+
     private bool isTransitioning;
 
     void Awake()
@@ -25,7 +29,7 @@ public class RoomTransitionManager : MonoBehaviour
 
     void Start()
     {
-        currentRoom = startingRoom;
+        CurrentRoom = startingRoom;
 
         Room[] allRooms = FindObjectsByType<Room>(FindObjectsSortMode.None);
 
@@ -41,7 +45,7 @@ public class RoomTransitionManager : MonoBehaviour
             }
         }
 
-        ApplyRoomSettings(currentRoom);
+        ApplyRoomSettings(CurrentRoom);
 
         SetFadeAlpha(0f);
     }
@@ -65,17 +69,21 @@ public class RoomTransitionManager : MonoBehaviour
 
         yield return Fade(1f);
 
-        if (currentRoom != null)
+        Room previousRoom = CurrentRoom;
+
+        if (CurrentRoom != null)
         {
-            currentRoom.HideRoom();
+            CurrentRoom.HideRoom();
         }
 
-        currentRoom = targetRoom;
-        currentRoom.ShowRoom();
+        CurrentRoom = targetRoom;
+        CurrentRoom.ShowRoom();
 
         player.position = targetSpawnPoint.position;
 
-        ApplyRoomSettings(currentRoom);
+        ApplyRoomSettings(CurrentRoom);
+
+        OnRoomChanged?.Invoke(previousRoom, CurrentRoom);
 
         yield return Fade(0f);
 
