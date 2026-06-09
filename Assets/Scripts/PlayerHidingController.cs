@@ -34,11 +34,6 @@ public class PlayerHidingController : MonoBehaviour
     {
         if (!IsHiding)
             return;
-
-        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Escape))
-        {
-            ExitHidingSpot();
-        }
     }
 
     public void HideInside(HidingSpot hidingSpot, Transform hidePoint)

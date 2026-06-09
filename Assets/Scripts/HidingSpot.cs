@@ -40,12 +40,6 @@ public class HidingSpot : MonoBehaviour, Interactable
         if (playerHidingController == null)
             return;
 
-        if (isOccupied)
-        {
-            playerHidingController.ExitHidingSpot();
-            return;
-        }
-
         isOccupied = true;
 
         SetDoorVisual(false);

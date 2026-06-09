@@ -11022,6 +11022,7 @@ GameObject:
   - component: {fileID: 2070549072}
   - component: {fileID: 2070549076}
   - component: {fileID: 2070549077}
+  - component: {fileID: 2070549078}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -11223,6 +11224,19 @@ MonoBehaviour:
   playerController: {fileID: 2070549072}
   playerSpriteRenderer: {fileID: 2070549070}
   playerCollider: {fileID: 2070549075}
+--- !u!114 &2070549078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070549069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b4f4bb13ebc1e449d8abb13a11a757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteract
+  interactText: {fileID: 1521830667}
 --- !u!1 &2096353471
 GameObject:
   m_ObjectHideFlags: 0
