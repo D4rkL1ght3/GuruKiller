@@ -3944,6 +3944,7 @@ MonoBehaviour:
   sightBlockerLayers:
     serializedVersion: 2
     m_Bits: 8
+  playerHidingController: {fileID: 2070549077}
   chaseSpeed: 2.8
   catchDistance: 1.4
   losePlayerRange: 10
@@ -8232,6 +8233,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1676605550}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1078099511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1078099512}
+  m_Layer: 0
+  m_Name: ExitPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1078099512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078099511}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1300625647}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1137444578
 GameObject:
   m_ObjectHideFlags: 0
@@ -8322,6 +8354,7 @@ GameObject:
   - component: {fileID: 1300625647}
   - component: {fileID: 1300625646}
   - component: {fileID: 1300625648}
+  - component: {fileID: 1300625649}
   m_Layer: 0
   m_Name: Cabinet
   m_TagString: Untagged
@@ -8400,7 +8433,8 @@ Transform:
   m_LocalPosition: {x: -3.5, y: 5.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1078099512}
   m_Father: {fileID: 2096353472}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1300625648
@@ -8449,6 +8483,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.4791666, y: 1.3816094}
   m_EdgeRadius: 0
+--- !u!114 &1300625649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300625645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db6638bc4d73936498fa838e5e3f1456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HidingSpot
+  hidePoint: {fileID: 1300625647}
+  exitPoint: {fileID: 1078099512}
+  playerHidingController: {fileID: 2070549077}
+  spriteRenderer: {fileID: 1300625646}
+  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  openVisual: {fileID: 4571219663932216320, guid: 065107d0dc65b834283a05e86962a662, type: 3}
+  closedVisual: {fileID: -7259325363768027736, guid: 065107d0dc65b834283a05e86962a662, type: 3}
 --- !u!1 &1316699524
 GameObject:
   m_ObjectHideFlags: 0
@@ -10968,6 +11021,7 @@ GameObject:
   - component: {fileID: 2070549075}
   - component: {fileID: 2070549072}
   - component: {fileID: 2070549076}
+  - component: {fileID: 2070549077}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -11154,6 +11208,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2070549077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070549069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0678f69c41d74d94e899a786154d1bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHidingController
+  playerController: {fileID: 2070549072}
+  playerSpriteRenderer: {fileID: 2070549070}
+  playerCollider: {fileID: 2070549075}
 --- !u!1 &2096353471
 GameObject:
   m_ObjectHideFlags: 0

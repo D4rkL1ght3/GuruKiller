@@ -31,6 +31,9 @@ public class TeacherAI : MonoBehaviour
     public bool requireLineOfSight = true;
     public LayerMask sightBlockerLayers;
 
+    [Header("Hiding")]
+    public PlayerHidingController playerHidingController;
+
     [Header("Chase")]
     public float chaseSpeed = 2.8f;
     public float catchDistance = 0.45f;
@@ -155,6 +158,12 @@ public class TeacherAI : MonoBehaviour
 
     private void UpdateChaseState()
     {
+        if (playerHidingController != null && playerHidingController.IsHiding)
+        {
+            ChangeState(TeacherState.Patrol);
+            return;
+        }
+
         if (roomController != null &&
             !roomController.IsTeacherInSameRoomAsPlayer())
         {
@@ -311,6 +320,11 @@ public class TeacherAI : MonoBehaviour
     {
         if (graceTimer > 0f)
             return false;
+
+        if (playerHidingController != null && playerHidingController.IsHiding)
+        {
+            return false;
+        }
 
         if (roomController != null)
         {
