@@ -66,6 +66,20 @@ public class TeacherRoomController : MonoBehaviour
     {
         currentPlayerRoom = newRoom;
 
+        // If the teacher is inside a classroom and the player leaves that classroom
+        // while being chased, the teacher should exit through the classroom door.
+        if (isInsideClassroom &&
+            currentTeacherRoom != null &&
+            currentPlayerRoom != currentTeacherRoom)
+        {
+            if (teacherAI != null && teacherAI.IsChasing())
+            {
+                ChasePlayerOutOfCurrentRoom();
+                UpdateTeacherVisibility();
+                return;
+            }
+        }
+
         if (!IsTeacherInSameRoomAsPlayer() && !isInsideClassroom)
         {
             targetEntrance = FindEntranceForRoom(currentPlayerRoom);
@@ -83,6 +97,74 @@ public class TeacherRoomController : MonoBehaviour
         }
 
         UpdateTeacherVisibility();
+    }
+
+    private void ChasePlayerOutOfCurrentRoom()
+    {
+        if (currentEntrance == null)
+            return;
+
+        if (teacherAI == null)
+            return;
+
+        // Stop targeting the classroom entrance while we are still inside the room.
+        targetEntrance = null;
+
+        if (currentEntrance.teacherInsideExitPoint != null)
+        {
+            teacherAI.MoveToTarget(
+                currentEntrance.teacherInsideExitPoint,
+                teacherAI.chaseSpeed,
+                CompleteExitAndContinueChase
+            );
+        }
+        else
+        {
+            CompleteExitAndContinueChase();
+        }
+    }
+
+    private void CompleteExitAndContinueChase()
+    {
+        if (!isInsideClassroom)
+            return;
+
+        if (currentEntrance == null)
+            return;
+
+        Room returnRoom = currentEntrance.hallwayRoom;
+
+        if (currentEntrance.teacherOutsideSpawnPoint != null)
+        {
+            teacherAI.TeleportTo(
+                currentEntrance.teacherOutsideSpawnPoint.position
+            );
+        }
+
+        currentTeacherRoom = returnRoom;
+        isInsideClassroom = false;
+
+        ApplyRoomToTeacher(
+            currentTeacherRoom,
+            currentEntrance.hallwayReturnPatrolIndex
+        );
+
+        currentEntrance = null;
+
+        // If the player is now in another classroom, chase that classroom's entrance.
+        // If the player is in the hallway, chase the player directly.
+        if (!IsTeacherInSameRoomAsPlayer())
+        {
+            targetEntrance = FindEntranceForRoom(currentPlayerRoom);
+        }
+        else
+        {
+            targetEntrance = null;
+        }
+
+        UpdateTeacherVisibility();
+
+        teacherAI.ForceChase();
     }
 
     public bool IsTeacherInSameRoomAsPlayer()

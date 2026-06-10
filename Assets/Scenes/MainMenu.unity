@@ -10838,7 +10838,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1948805450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7ab7c09967b8147a350325a7142f77, type: 3}
+  m_Script: {fileID: 11500000, guid: 53a19dbf11af91d4484f843bff2f031e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOverlay: {fileID: 1242100301}
@@ -10848,9 +10848,9 @@ MonoBehaviour:
   - {fileID: 691717686}
   bgmSource: {fileID: 0}
   sfxSource: {fileID: 0}
-  backgroundMusic: {fileID: 8300000, guid: 6ffbfc8a944317c46a400081eaeaa4fb, type: 3}
+  backgroundMusic: {fileID: 0}
   buttonHoverSound: {fileID: 0}
-  buttonClickSound: {fileID: 8300000, guid: ac048f068c3b588469626575f53509fb, type: 3}
+  buttonClickSound: {fileID: 0}
   initialFadeInTime: 2.5
   titleAppearDelay: 1
   titleFadeTime: 3
@@ -10860,7 +10860,7 @@ MonoBehaviour:
   sceneTransitionFadeTime: 1.5
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 1, g: 1, b: 1, a: 0.8}
-  gameSceneName: SampleScene
+  gameSceneName: MainScene
   gameSceneBuildIndex: 1
 --- !u!1 &1956472848
 GameObject:

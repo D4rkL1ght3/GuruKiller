@@ -1,7 +1,6 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TeacherQuizManager : MonoBehaviour
 {
@@ -12,21 +11,28 @@ public class TeacherQuizManager : MonoBehaviour
     public GameObject quizPanel;
     public TMP_Text progressText;
     public TMP_Text questionText;
-    public TMP_Text feedbackText;
+    public TMP_Text timerText;
     public TMP_InputField answerInput;
 
     [Header("Quiz Settings")]
     public int questionsPerQuiz = 3;
     public int maxDifficulty = 8;
 
+    [Header("Timer")]
+    public float secondsPerQuestion = 120f;
+    public bool failQuizWhenTimerRunsOut = true;
+
     private int currentDifficulty;
     private int currentQuestionNumber;
     private int correctAnswer;
+
+    private float currentQuestionTime;
 
     private Action onQuizPassed;
     private Action onQuizFailed;
 
     private bool quizActive;
+    private bool quizEnding;
 
     void Start()
     {
@@ -34,12 +40,16 @@ public class TeacherQuizManager : MonoBehaviour
         {
             quizPanel.SetActive(false);
         }
+
+        UpdateTimerText(secondsPerQuestion);
     }
 
     void Update()
     {
         if (!quizActive)
             return;
+
+        UpdateQuestionTimer();
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -56,6 +66,7 @@ public class TeacherQuizManager : MonoBehaviour
 
         currentQuestionNumber = 0;
         quizActive = true;
+        quizEnding = false;
 
         Time.timeScale = 0f;
 
@@ -64,17 +75,27 @@ public class TeacherQuizManager : MonoBehaviour
             quizPanel.SetActive(true);
         }
 
-        if (feedbackText != null)
-        {
-            feedbackText.text = "";
-        }
-
         GenerateNextQuestion();
+    }
+
+    private void UpdateQuestionTimer()
+    {
+        currentQuestionTime -= Time.unscaledDeltaTime;
+        currentQuestionTime = Mathf.Max(currentQuestionTime, 0f);
+
+        UpdateTimerText(currentQuestionTime);
+
+        if (currentQuestionTime <= 0f && failQuizWhenTimerRunsOut)
+        {
+            FinishQuiz(false);
+        }
     }
 
     private void GenerateNextQuestion()
     {
         currentQuestionNumber++;
+        currentQuestionTime = secondsPerQuestion;
+        UpdateTimerText(currentQuestionTime);
 
         MathQuestionGenerator.MathQuestion question =
             questionGenerator.GenerateQuestion(currentDifficulty);
@@ -97,11 +118,6 @@ public class TeacherQuizManager : MonoBehaviour
 
         if (!int.TryParse(answerInput.text, out int playerAnswer))
         {
-            if (feedbackText != null)
-            {
-                feedbackText.text = "Enter a valid number!";
-            }
-
             answerInput.text = "";
             answerInput.ActivateInputField();
             return;
@@ -109,11 +125,6 @@ public class TeacherQuizManager : MonoBehaviour
 
         if (playerAnswer == correctAnswer)
         {
-            if (feedbackText != null)
-            {
-                feedbackText.text = "Correct!";
-            }
-
             if (currentQuestionNumber >= questionsPerQuiz)
             {
                 FinishQuiz(true);
@@ -125,17 +136,16 @@ public class TeacherQuizManager : MonoBehaviour
         }
         else
         {
-            if (feedbackText != null)
-            {
-                feedbackText.text = $"Wrong! Correct answer was {correctAnswer}.";
-            }
-
             FinishQuiz(false);
         }
     }
 
     private void FinishQuiz(bool passed)
     {
+        if (quizEnding)
+            return;
+
+        quizEnding = true;
         quizActive = false;
 
         Time.timeScale = 1f;
@@ -153,5 +163,17 @@ public class TeacherQuizManager : MonoBehaviour
         {
             onQuizFailed?.Invoke();
         }
+    }
+
+    private void UpdateTimerText(float timeRemaining)
+    {
+        if (timerText == null)
+            return;
+
+        int totalSeconds = Mathf.CeilToInt(timeRemaining);
+        int minutes = totalSeconds / 60;
+        int seconds = totalSeconds % 60;
+
+        timerText.text = $"{minutes:00}:{seconds:00}";
     }
 }

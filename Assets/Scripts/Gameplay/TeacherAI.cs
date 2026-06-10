@@ -21,6 +21,7 @@ public class TeacherAI : MonoBehaviour
     public PlayerController playerController;
     public TeacherQuizManager quizManager;
     public TeacherRoomController roomController;
+    public GameOverManager gameOverManager;
 
     [Header("Patrol")]
     public Transform[] patrolPoints;
@@ -509,21 +510,17 @@ public class TeacherAI : MonoBehaviour
 
     private void OnQuizFailed()
     {
-        Debug.Log("Player failed the teacher's quiz! Game over goes here.");
+        Debug.Log("Player failed the teacher's quiz! Starting game over sequence.");
 
-        if (playerController != null)
+        StopMoving();
+
+        if (gameOverManager != null)
         {
-            playerController.enabled = true;
+            gameOverManager.TriggerGameOver();
+            return;
         }
 
-        graceTimer = escapeGraceTime;
-
-        ChangeState(TeacherState.Patrol);
-
-        if (roomController != null)
-        {
-            roomController.ExitRoomAfterQuiz();
-        }
+        Debug.LogWarning("No GameOverManager assigned to TeacherAI.");
     }
 
     private void ChangeState(TeacherState newState)
@@ -637,11 +634,14 @@ public class TeacherAI : MonoBehaviour
     }
 
     public void MoveToTarget(
-        Transform target,
-        float speed,
-        Action reachedCallback
-    )
+    Transform target,
+    float speed,
+    Action reachedCallback
+)
     {
+        patrolOnce = false;
+        onPatrolOnceComplete = null;
+
         moveTarget = target;
         moveTargetSpeed = speed;
         onMoveTargetReached = reachedCallback;
