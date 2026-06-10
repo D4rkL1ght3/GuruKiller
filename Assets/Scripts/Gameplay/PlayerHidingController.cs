@@ -6,11 +6,13 @@ public class PlayerHidingController : MonoBehaviour
     public PlayerController playerController;
     public SpriteRenderer playerSpriteRenderer;
     public Collider2D playerCollider;
+    public TeacherAI teacherAI;
 
     [Header("Hiding State")]
     public bool IsHiding { get; private set; }
 
     private HidingSpot currentHidingSpot;
+    private bool canExitHidingSpot = true;
 
     void Awake()
     {
@@ -34,6 +36,9 @@ public class PlayerHidingController : MonoBehaviour
     {
         if (!IsHiding)
             return;
+
+        if (!canExitHidingSpot)
+            return;
     }
 
     public void HideInside(HidingSpot hidingSpot, Transform hidePoint)
@@ -43,6 +48,7 @@ public class PlayerHidingController : MonoBehaviour
 
         currentHidingSpot = hidingSpot;
         IsHiding = true;
+        canExitHidingSpot = true;
 
         if (playerController != null)
         {
@@ -61,7 +67,12 @@ public class PlayerHidingController : MonoBehaviour
 
         if (playerCollider != null)
         {
-            playerCollider.enabled = true;
+            playerCollider.enabled = false;
+        }
+
+        if (teacherAI != null)
+        {
+            teacherAI.HandlePlayerHid(hidingSpot);
         }
     }
 
@@ -70,6 +81,24 @@ public class PlayerHidingController : MonoBehaviour
         if (!IsHiding)
             return;
 
+        ExitHidingSpotInternal();
+    }
+
+    public void ForceExitHidingSpot()
+    {
+        if (!IsHiding)
+            return;
+
+        ExitHidingSpotInternal();
+    }
+
+    public void SetCanExitHidingSpot(bool canExit)
+    {
+        canExitHidingSpot = canExit;
+    }
+
+    private void ExitHidingSpotInternal()
+    {
         Transform exitPoint = null;
 
         if (currentHidingSpot != null)
@@ -92,6 +121,11 @@ public class PlayerHidingController : MonoBehaviour
             playerController.enabled = true;
         }
 
+        if (playerCollider != null)
+        {
+            playerCollider.enabled = true;
+        }
+
         if (currentHidingSpot != null)
         {
             currentHidingSpot.OnPlayerExited();
@@ -99,5 +133,6 @@ public class PlayerHidingController : MonoBehaviour
 
         currentHidingSpot = null;
         IsHiding = false;
+        canExitHidingSpot = true;
     }
 }

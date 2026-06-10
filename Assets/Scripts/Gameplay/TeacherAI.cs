@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class TeacherAI : MonoBehaviour
@@ -8,6 +9,7 @@ public class TeacherAI : MonoBehaviour
         Patrol,
         Chase,
         MoveToTarget,
+        CheckHidingSpot,
         Quiz
     }
 
@@ -39,6 +41,15 @@ public class TeacherAI : MonoBehaviour
     public float catchDistance = 0.45f;
     public float losePlayerRange = 7f;
     public float escapeGraceTime = 1.5f;
+
+    [Header("Hiding Spot Check")]
+    public float hidingSpotCheckSpeed = 2.8f;
+    public float hidingSpotCheckDistance = 0.2f;
+    public float hidingSpotWaitTime = 1.5f;
+
+    private HidingSpot targetHidingSpot;
+    private bool sawPlayerHide;
+    private Coroutine hidingCheckRoutine;
 
     [Header("Quiz")]
     public int startingQuizDifficulty = 1;
@@ -107,6 +118,10 @@ public class TeacherAI : MonoBehaviour
             case TeacherState.MoveToTarget:
                 break;
 
+            case TeacherState.CheckHidingSpot:
+                MoveTowardHidingSpot();
+                break;
+
             case TeacherState.Quiz:
                 break;
         }
@@ -158,12 +173,6 @@ public class TeacherAI : MonoBehaviour
 
     private void UpdateChaseState()
     {
-        if (playerHidingController != null && playerHidingController.IsHiding)
-        {
-            ChangeState(TeacherState.Patrol);
-            return;
-        }
-
         if (roomController != null &&
             !roomController.IsTeacherInSameRoomAsPlayer())
         {
@@ -192,6 +201,7 @@ public class TeacherAI : MonoBehaviour
         }
     }
 
+    // Movement Methods
     private void MoveAlongPatrol()
     {
         if (patrolPoints == null || patrolPoints.Length == 0)
@@ -316,6 +326,106 @@ public class TeacherAI : MonoBehaviour
         moveDirection = Vector2.zero;
     }
 
+    // Player Detection and Hiding Spot Checking
+    public void HandlePlayerHid(HidingSpot hidingSpot)
+    {
+        if (hidingSpot == null)
+            return;
+
+        if (currentState != TeacherState.Chase)
+            return;
+
+        targetHidingSpot = hidingSpot;
+        sawPlayerHide = WasPlayerInDetectionRangeWhenHiding();
+
+        ChangeState(TeacherState.CheckHidingSpot);
+    }
+
+    private bool WasPlayerInDetectionRangeWhenHiding()
+    {
+        if (player == null)
+            return false;
+
+        if (roomController != null)
+        {
+            if (!roomController.IsTeacherInSameRoomAsPlayer())
+            {
+                return false;
+            }
+        }
+
+        float distanceToPlayer =
+            Vector2.Distance(transform.position, player.position);
+
+        return distanceToPlayer <= detectionRange;
+    }
+
+    private void MoveTowardHidingSpot()
+    {
+        if (targetHidingSpot == null)
+        {
+            ChangeState(TeacherState.Patrol);
+            return;
+        }
+
+        Transform checkPoint = targetHidingSpot.GetTeacherCheckPoint();
+
+        if (checkPoint == null)
+        {
+            ChangeState(TeacherState.Patrol);
+            return;
+        }
+
+        MoveTowardPosition(checkPoint.position, hidingSpotCheckSpeed);
+
+        float distanceToSpot =
+            Vector2.Distance(transform.position, checkPoint.position);
+
+        if (distanceToSpot <= hidingSpotCheckDistance)
+        {
+            StopMoving();
+
+            if (hidingCheckRoutine == null)
+            {
+                hidingCheckRoutine = StartCoroutine(CheckHidingSpotRoutine());
+            }
+        }
+    }
+
+    private IEnumerator CheckHidingSpotRoutine()
+    {
+        if (playerHidingController != null)
+        {
+            playerHidingController.SetCanExitHidingSpot(false);
+        }
+
+        yield return new WaitForSeconds(hidingSpotWaitTime);
+
+        if (sawPlayerHide)
+        {
+            if (targetHidingSpot != null)
+            {
+                targetHidingSpot.ForcePlayerOut();
+            }
+
+            targetHidingSpot = null;
+            hidingCheckRoutine = null;
+
+            CatchPlayer();
+            yield break;
+        }
+
+        if (playerHidingController != null)
+        {
+            playerHidingController.SetCanExitHidingSpot(true);
+        }
+
+        targetHidingSpot = null;
+        hidingCheckRoutine = null;
+
+        ChangeState(TeacherState.Patrol);
+    }
+
     private bool CanSeePlayer()
     {
         if (graceTimer > 0f)
@@ -419,6 +529,23 @@ public class TeacherAI : MonoBehaviour
 
     private void ChangeState(TeacherState newState)
     {
+        if (currentState == TeacherState.CheckHidingSpot &&
+            newState != TeacherState.CheckHidingSpot)
+        {
+            if (hidingCheckRoutine != null)
+            {
+                StopCoroutine(hidingCheckRoutine);
+                hidingCheckRoutine = null;
+            }
+
+            if (playerHidingController != null)
+            {
+                playerHidingController.SetCanExitHidingSpot(true);
+            }
+
+            targetHidingSpot = null;
+        }
+
         currentState = newState;
         StopMoving();
 
@@ -468,6 +595,7 @@ public class TeacherAI : MonoBehaviour
         animator.SetBool("IsMoving", moveDirection != Vector2.zero);
     }
 
+    // Public Methods
     public void SetPatrolPoints(Transform[] newPatrolPoints)
     {
         patrolPoints = newPatrolPoints;

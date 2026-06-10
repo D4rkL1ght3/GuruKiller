@@ -6,6 +6,9 @@ public class HidingSpot : MonoBehaviour, Interactable
     public Transform hidePoint;
     public Transform exitPoint;
 
+    [Header("Teacher")]
+    public Transform teacherCheckPoint;
+
     [Header("Player")]
     public PlayerHidingController playerHidingController;
 
@@ -72,6 +75,27 @@ public class HidingSpot : MonoBehaviour, Interactable
         {
             spriteRenderer.color = originalColor;
         }
+    }
+
+    public void ForcePlayerOut()
+    {
+        if (playerHidingController == null)
+            return;
+
+        if (!isOccupied)
+            return;
+
+        playerHidingController.ForceExitHidingSpot();
+    }
+
+    public Transform GetTeacherCheckPoint()
+    {
+        if (teacherCheckPoint != null)
+        {
+            return teacherCheckPoint;
+        }
+
+        return transform;
     }
 
     public void OnPlayerExited()
