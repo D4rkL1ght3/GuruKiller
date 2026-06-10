@@ -411,7 +411,6 @@ public class TeacherAI : MonoBehaviour
             targetHidingSpot = null;
             hidingCheckRoutine = null;
 
-            CatchPlayer();
             yield break;
         }
 
