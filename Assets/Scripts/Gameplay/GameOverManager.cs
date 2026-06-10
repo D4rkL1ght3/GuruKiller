@@ -109,4 +109,10 @@ public class GameOverManager : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.buildIndex);
     }
+
+    public void ReturnToMainMenu(string mainMenuSceneName)
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(mainMenuSceneName);
+    }
 }
