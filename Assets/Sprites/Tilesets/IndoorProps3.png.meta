@@ -1005,10 +1005,10 @@ TextureImporter:
       name: Inside_D_30
       rect:
         serializedVersion: 2
-        x: 242
-        y: 269
-        width: 83
-        height: 44
+        x: 250
+        y: 287
+        width: 75
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

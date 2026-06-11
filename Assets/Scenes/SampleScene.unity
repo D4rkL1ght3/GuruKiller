@@ -3945,10 +3945,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   playerHidingController: {fileID: 2070549077}
-  chaseSpeed: 2.8
+  chaseSpeed: 2.5
   catchDistance: 1.4
   losePlayerRange: 10
   escapeGraceTime: 20
+  hidingSpotCheckSpeed: 2
+  hidingSpotCheckDistance: 0.2
+  hidingSpotWaitTime: 1.5
   startingQuizDifficulty: 1
   maxQuizDifficulty: 8
   animator: {fileID: 525566449}
@@ -8497,6 +8500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HidingSpot
   hidePoint: {fileID: 1300625647}
   exitPoint: {fileID: 1078099512}
+  teacherCheckPoint: {fileID: 1078099512}
   playerHidingController: {fileID: 2070549077}
   spriteRenderer: {fileID: 1300625646}
   highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
@@ -11224,6 +11228,7 @@ MonoBehaviour:
   playerController: {fileID: 2070549072}
   playerSpriteRenderer: {fileID: 2070549070}
   playerCollider: {fileID: 2070549075}
+  teacherAI: {fileID: 525566454}
 --- !u!114 &2070549078
 MonoBehaviour:
   m_ObjectHideFlags: 0
